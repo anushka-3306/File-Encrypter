@@ -1,4 +1,4 @@
-node {
+node('linux') {
     try {
 
         stage('Build') {
