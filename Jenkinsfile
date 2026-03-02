@@ -2,14 +2,19 @@ node('linux') {
     try {
 
         stage('Build') {
-            sh '''
-            echo "Building Java project..."
-            cd "Password Protection"
-            mkdir -p build
-            javac -d build src/*.java
-            echo "Build successful"
-            '''
-        }
+    sh '''
+    echo "Current directory:"
+    pwd
+    echo "Listing files:"
+    ls -l
+    echo "Building Java project..."
+    cd "Password Protection"
+    ls -l
+    mkdir -p build
+    javac -d build src/*.java
+    echo "Build successful"
+    '''
+}
 
         stage('Test') {
             sh '''
