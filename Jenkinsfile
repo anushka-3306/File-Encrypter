@@ -1,4 +1,5 @@
 node('linux') {
+    checkout scm
     try {
 
         stage('Build') {
